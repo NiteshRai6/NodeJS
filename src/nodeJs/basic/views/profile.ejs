@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Profile EJS Page</title>
+</head>
+
+<body>
+    <%- include('common/header'); %>
+    <h1> This is Dynamic Page By EJS</h1>
+    <h1> Welcome <%= user.name %>
+    </h1>
+    <h3> Email : <%= user.email %>
+    </h3>
+    <h3> Country : <%= user.country %>
+    </h3>
+    <ul>
+        <% user.skills.forEach( (item) => { %>
+            <li>
+                <%= item %>
+            </li>
+
+            <% }) %>
+    </ul>
+</body>
+
+</html>
